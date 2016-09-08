@@ -10,3 +10,106 @@
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
+
+/*
+ * Copyright (C) 2016 SM
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
+package lab2.finarfin;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author Finarfin
+ */
+public class Lab2Finarfin {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        System.out.println("Bienvenido al programa de Finarfin");
+        Scanner as = new Scanner(System.in);
+        System.out.println("1. Años bisiestos, seculares y no seculares, y "
+                + "no bisiestos.");
+        System.out.println("Ingrese el año que desea saber si es bisiesto");
+        int a = as.nextInt();
+
+        if (a == 2016) {
+            System.out.println("El año 2016 es bisiesto");
+
+        }
+
+        if (a > 2016) {
+            if (a % 4 == 0) {
+                if (a % 100 == 0) {
+                    if (a % 400 == 0) {
+                        System.out.println("El año " + (a) + " sera bisiesto"
+                                + "secular");
+                    } else {
+                        System.out.println("El año " + (a) + " sera no bisiesto "
+                                + "secular");
+                    }
+                } else {
+                    System.out.println("El año " + (a) + " sera bisiesto "
+                            + "no secular");
+                }
+            }
+        }
+        if (a < 2016) {
+            if (a % 4 == 0) {
+                if (a % 100 == 0) {
+                    if (a % 400 == 0) {
+                        System.out.println("El año " + (a) + " fue bisiesto "
+                                + "secular");
+                    } else {
+                        System.out.println("El año " + (a) + " fue no bisiesto "
+                                + "secular");
+                    }
+                } else {
+                    System.out.println("El año " + (a) + " fue bisiesto "
+                            + "no secular");
+                }
+            }
+        }
+
+        System.out.println("2. Dia de la semana");
+        Scanner sd = new Scanner(System.in);
+        System.out.println("Escriba un numero entre 1 y 7, correspondera a un "
+                + "dia de la semana");
+        int b = sd.nextInt();
+
+        if (b == 1) {
+            System.out.println("Lunes");
+        } else if (b == 2) {
+            System.out.println("Martes");
+        } else if (b == 3) {
+            System.out.println("Miercoles");
+        } else if (b == 4) {
+            System.out.println("Jueves");
+        } else if (b == 5) {
+            System.out.println("Viernes");
+        } else if (b == 6) {
+            System.out.println("Sabado");
+        } else if (b == 7) {
+            System.out.println("Domingo");
+        } else {
+            System.out.println("Entrada no valida");
+        }
+
+    }
+
+}
